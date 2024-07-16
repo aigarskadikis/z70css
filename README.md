@@ -97,3 +97,34 @@ action=host.list
 .list-table thead tr th:nth-child(15),
 .list-table tbody tr td:nth-child(15) {display:none}
 ```
+
+
+action=item.list&context=host
+```
+/* hide an item key */
+.list-table thead tr th:nth-child(5),
+.list-table tbody tr td:nth-child(5) {display:none}
+
+/* hide tags */
+.list-table thead tr th:nth-child(11),
+.list-table tbody tr td:nth-child(11) {display:none}
+```
+
+
+action=trigger.list&context=host
+```
+/* hide operation data */
+.list-table thead tr th:nth-child(5),
+.list-table tbody tr td:nth-child(5) {display:none}
+table tbody tr td a.link-alt.orange {display:none}
+```
+
+
+action=trigger.list&context=host
+```
+/* hide tags */
+.list-table thead tr th:nth-child(9),
+.list-table tbody tr td:nth-child(9) {display:none}
+```
+
+
