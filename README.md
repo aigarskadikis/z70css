@@ -74,6 +74,7 @@ font-size: 1.25em;
 }
 ```
 
+## "Data collecton" => "Hosts" 
 action=host.list
 ```
 /* hide web*/
@@ -98,7 +99,7 @@ action=host.list
 .list-table tbody tr td:nth-child(15) {display:none}
 ```
 
-
+## "Data collecton" => "Hosts" => "Items"
 action=item.list&context=host
 ```
 /* hide tags in the items page at a host level */
@@ -125,12 +126,11 @@ table thead tr th:nth-child(5), table tbody tr td:nth-child(5) {white-space:nowr
 table tbody tr td.wordbreak a.link-alt.teal.js-update-item {display:none}
 ```
 
-
-action=trigger.list&context=host
+## "Data collecton" => "Hosts" => "Triggers"
+action=trigger.list&context=host&filter_hostids%5B0%5D=
 ```
 /* hide operation data */
-.list-table thead tr th:nth-child(5),
-.list-table tbody tr td:nth-child(5) {display:none}
+.list-table thead tr th:nth-child(5),.list-table tbody tr td:nth-child(5) {display:none}
 
 /* hide tags at triggers page */
 .list-table thead tr th:nth-child(9),
@@ -143,4 +143,17 @@ table tbody tr td a.link-alt.grey {display:none}
 
 ```
 
+## special case when working under "Hosts" => "Triggers" and erasing the host object
+
+action=trigger.list&context=host&filter_inherited=-1
+```
+/* a special case when filtering out multiple hosts */
+/* hide operation data */
+.list-table thead tr th:nth-child(6),
+.list-table tbody tr td:nth-child(6) {display:none}
+
+/* hide tags at triggers page */
+.list-table thead tr th:nth-child(10),
+.list-table tbody tr td:nth-child(10) {display:none}
+```
 
