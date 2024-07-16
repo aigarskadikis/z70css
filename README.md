@@ -101,13 +101,22 @@ action=host.list
 
 action=item.list&context=host
 ```
-/* hide an item key */
-.list-table thead tr th:nth-child(5),
-.list-table tbody tr td:nth-child(5) {display:none}
-
-/* hide tags */
+/* hide tags in the items page at a host level */
 .list-table thead tr th:nth-child(11),
 .list-table tbody tr td:nth-child(11) {display:none}
+
+/* hide origin lld rule */
+table tbody tr td a.link-alt.orange {display:none}
+table tbody tr td.wordbreak a.link-alt.orange {display:none}
+
+/* hide origin template name */
+table tbody tr td.wordbreak a.link-alt.grey {display:none}
+
+/* do not let item type to take 2 columns */
+table thead tr th:nth-child(9), table tbody tr td:nth-child(9) {white-space:nowrap}
+
+/* hide a reference to LLD rule */
+table tbody tr td.wordbreak a.link-alt.teal.js-update-item {display:none}
 ```
 
 
@@ -116,15 +125,12 @@ action=trigger.list&context=host
 /* hide operation data */
 .list-table thead tr th:nth-child(5),
 .list-table tbody tr td:nth-child(5) {display:none}
-table tbody tr td a.link-alt.orange {display:none}
-```
 
-
-action=trigger.list&context=host
-```
-/* hide tags */
+/* hide tags at triggers page */
 .list-table thead tr th:nth-child(9),
 .list-table tbody tr td:nth-child(9) {display:none}
+
+table tbody tr td a.link-alt.orange {display:none}
 ```
 
 
