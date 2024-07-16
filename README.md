@@ -157,3 +157,11 @@ action=trigger.list&context=host&filter_inherited=-1
 .list-table tbody tr td:nth-child(10) {display:none}
 ```
 
+
+action=userprofile.edit
+```
+table tbody tr.form_row td input {
+white-space:nowrap;
+width:400px !important;
+}
+```
