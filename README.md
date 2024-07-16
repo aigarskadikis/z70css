@@ -1,6 +1,6 @@
 # Zabbix 7.0 CSS overrides
 
-dashboard.view:
+action=dashboard.view
 ```
 /* "Data overview" widget. The line which reads from bottom to top, now we can read from left to right */
 .list-table thead th .text-vertical {
@@ -8,7 +8,7 @@ dashboard.view:
 }
 ```
 
-trigger.list
+action=trigger.list&context=template
 ```
 /* use all screen space for modual window */
 .overlay-dialogue.modal-popup {
@@ -40,6 +40,19 @@ height:2em;
     text-align: left;
 }
 
+/* give more screen space to popup screen */
+div.modal-popup-large {
+top:0;
+}
+
+/* hide operation data in the trigger list while browsing template */
+.list-table thead tr th:nth-child(4),
+.list-table tbody tr td:nth-child(4) {display:none}
+
+/* hide tags column while browsing triggers at template level */
+.list-table thead tr th:nth-child(7),
+.list-table tbody tr td:nth-child(7) {display:none}
+
 /* change border of input fields */
 .multiselect, .z-select .focusable, z-select .focusable, .z-select .list,
 z-select .list, input[type="text"], input[type="password"],
@@ -51,13 +64,9 @@ input[type="time"], input[type="file"], textarea, select {
     border-top: 1px solid #eee;
 }
 
-/* give more screen space to popup screen */
-div.modal-popup-large {
-top:0;
-}
 ```
 
-map.view
+action=map.view
 ```
 /* increase font size in map */
 .map-container {
@@ -65,3 +74,26 @@ font-size: 1.25em;
 }
 ```
 
+action=host.list
+```
+/* hide web*/
+.list-table thead tr th:nth-child(7),
+.list-table tbody tr td:nth-child(7) {display:none}
+
+/* hide Interfaces
+.list-table thead tr th:nth-child(8),
+.list-table tbody tr td:nth-child(8) {display:none}
+*/
+
+/* hide templates*/
+.list-table thead tr th:nth-child(10),
+.list-table tbody tr td:nth-child(10) {display:none}
+
+/* hide encryption*/
+.list-table thead tr th:nth-child(13),
+.list-table tbody tr td:nth-child(13) {display:none}
+
+/* hide tags*/
+.list-table thead tr th:nth-child(15),
+.list-table tbody tr td:nth-child(15) {display:none}
+```
