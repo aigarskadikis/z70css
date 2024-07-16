@@ -112,8 +112,14 @@ table tbody tr td.wordbreak a.link-alt.orange {display:none}
 /* hide origin template name */
 table tbody tr td.wordbreak a.link-alt.grey {display:none}
 
-/* do not let item type to take 2 columns */
+/* do not let item Type to take 2 columns */
 table thead tr th:nth-child(9), table tbody tr td:nth-child(9) {white-space:nowrap}
+
+/* do not let item Name to take 2 columns */
+table thead tr th:nth-child(3), table tbody tr td:nth-child(3) {white-space:nowrap}
+
+/* do not let item Key to take 2 columns */
+table thead tr th:nth-child(5), table tbody tr td:nth-child(5) {white-space:nowrap}
 
 /* hide a reference to LLD rule */
 table tbody tr td.wordbreak a.link-alt.teal.js-update-item {display:none}
@@ -131,6 +137,10 @@ action=trigger.list&context=host
 .list-table tbody tr td:nth-child(9) {display:none}
 
 table tbody tr td a.link-alt.orange {display:none}
+
+/* hide origin template name */
+table tbody tr td a.link-alt.grey {display:none}
+
 ```
 
 
